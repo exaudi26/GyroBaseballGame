@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gyro Baseball</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <aside id="hud" class="panel">
+    <dl>
+      <dt>Phone</dt><dd data-field="phone"></dd>
+      <dt>Camera</dt><dd data-field="camera"></dd>
+      <dt>Hits</dt><dd data-field="hits"></dd>
+      <dt>Home runs</dt><dd data-field="homeRuns"></dd>
+      <dt>Streak</dt><dd data-field="streak"></dd>
+      <dt>Best</dt><dd data-field="best"></dd>
+      <dt>Last hit</dt><dd data-field="lastHit"></dd>
+      <dt>Pitch / Roll / Yaw</dt><dd data-field="orientation"></dd>
+      <dt>Swing peak</dt><dd data-field="peak"></dd>
+    </dl>
+    <p class="hint">Space: test swing &middot; C: zero yaw &middot; click once to enable sound</p>
+  </aside>
+
+  <div id="banner" role="status"></div>
+
+  <div id="camera-preview" class="panel">
+    <video id="webcam" autoplay playsinline muted></video>
+    <canvas id="pose-overlay" width="250" height="188"></canvas>
+  </div>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

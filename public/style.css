@@ -1,0 +1,97 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+#scene {
+  position: fixed;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.panel {
+  position: fixed;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.62);
+  border-radius: 8px;
+}
+
+#hud {
+  top: 12px;
+  left: 12px;
+  min-width: 240px;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#hud dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 16px;
+  margin: 0;
+}
+
+#hud dt {
+  opacity: 0.7;
+}
+
+#hud dd {
+  margin: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#hud dd[data-state='ok'] {
+  color: #6f6;
+}
+
+#hud dd[data-state='bad'] {
+  color: #f66;
+}
+
+#hud .hint {
+  margin: 8px 0 0;
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+#banner {
+  position: fixed;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 44px;
+  font-weight: 700;
+  text-shadow: 0 2px 10px #000;
+  pointer-events: none;
+}
+
+#camera-preview {
+  bottom: 12px;
+  left: 12px;
+  width: 250px;
+  height: 188px;
+  overflow: hidden;
+  background: #222;
+}
+
+#camera-preview video,
+#camera-preview canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(-1);
+}
